@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tabbar_demo/screens/dashboard.dart';
+import 'package:tabbar_demo/tabsPage.dart';
 
 import 'tab_containter_default.dart';
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TabContainerDefault(),
+      home: TabsPage(),
 //      TabContainerBottom(),
 //      TabContainerLoad1Time(),
 //      TabContainerIndexedStack(),
