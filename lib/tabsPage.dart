@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:tabbar_demo/screens/dashboard.dart';
+import 'package:tabbar_demo/screens/tab2.dart';
+import 'package:tabbar_demo/screens/tab3.dart';
 
 class TabsPage extends StatefulWidget {
 
@@ -12,47 +13,35 @@ class TabsPage extends StatefulWidget {
 
 class _TabsPageState extends State<TabsPage> {
   int _tabIndex = 0;
+  final List<Widget> _children = [Dashboard(), Tab2(), Tab3()];
 
-  Widget choosePage(){
-    switch (_tabIndex) {
-      case 0: 
-        return Dashboard();
-        break;
-      case 1: 
-        return Dashboard();
-        break;
-      case 2: 
-        return Dashboard();
-        break;
-
-      default: 
-        return Dashboard();
-        break;
-    }
-   }
+  void onTabTapped(int index) {
+    setState(() {
+      _tabIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: choosePage(),
+      body: _children[_tabIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (_index) {
-          _tabIndex = _index;
-        },
+        onTap: onTabTapped,
+        currentIndex: _tabIndex,
         backgroundColor: Colors.white,
         items: [
           BottomNavigationBarItem(
-            title: Text(""),
+            label: '',
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            title: Text(""),
+            label: '',
             icon: Icon(Icons.remove_red_eye),
           ),
 
           BottomNavigationBarItem(
-            title: Text(""),
+            label: '',
             icon: Icon(Icons.notifications),
           ),
           

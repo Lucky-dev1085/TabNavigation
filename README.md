@@ -18,4 +18,3 @@ In this demo, I made TabBar with 5 ways:
 Please refer to [my post on Medium](https://medium.com/fluttervn/making-bottom-tabbar-with-flutter-5ff82e8defe0?source=friends_link&sk=d08643e13c911feafa638bd7937f21ff) for more details
 
 ## Authors
-- [anlam87](https://github.com/anlam87) (anlam12787@gmail.com)
